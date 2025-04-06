@@ -56,12 +56,12 @@ The project was a great experience in:
 
 ---
 
-## 🤝 Let’s Connect!
+## 🧠 Let’s Connect!
 
-If you’re a recruiter, engineer, or fellow learner interested in Java, databases, or student info systems, I’d love to connect. I'm always looking for opportunities to grow and apply what I learn to real-world challenges.
+**Tej Jaideep Patel**  
+B.S. Computer Engineering  
+📍 Penn State University  
+✉️ tejpatelce@gmail.com  
+📞 814-826-5544
 
-Feel free to ⭐ this repo or reach out!
-
-    Tej Jaideep Patel
-    814-826-5544
-    tejpatelce@gmail.com
+---
