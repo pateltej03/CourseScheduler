@@ -10,29 +10,26 @@ This was a full-stack Java desktop application created for managing course sched
 
 ### 🎛 Admin Panel
 
--   **Add Semester:** Create and manage distinct semesters.
--   **Add Course:** Define new courses with code, description, and seat limits.
--   **Add Student:** Register students with their name and ID.
--   **Display Course Roster:** View scheduled and waitlisted students by course.
--   **Drop Student:** Remove a student from all schedules.
--   **Drop Course:** Remove a course and automatically update affected student entries.
+-   Add Semester
+-   Add Course (with seat limits)
+-   Add Student
+-   Display Course Roster
+-   Drop Student (from all courses)
+-   Drop Course (with waitlist rebalancing)
 
 ### 🎓 Student Panel
 
--   **Display Available Courses:** Browse course catalog for a selected semester.
--   **Schedule Course:** Attempt to enroll a student — auto-waitlist if full.
--   **Display Schedule:** View current schedule (course + status) for a student.
--   **Drop Course:** Drop a student from a specific course and auto-promote from waitlist.
+-   Display Available Courses
+-   Schedule Course (auto-waitlist if full)
+-   Display Schedule (with enrollment status)
+-   Drop Course (auto-promote from waitlist)
 
 ### 🔁 Backend Logic
 
--   Enforces **first-come-first-serve** with **timestamps**.
--   Handles **schedule capacity** and **automatic waitlist promotions**.
--   Manages data with clean, layered queries:
-    -   `CourseQueries`
-    -   `StudentQueries`
-    -   `ScheduleQueries`
-    -   `SemesterQueries`
+-   First-come-first-serve based on timestamps
+-   Auto-promotes students from waitlist
+-   Database interaction through query classes:
+    -   `CourseQueries`, `StudentQueries`, `ScheduleQueries`, `SemesterQueries`
 
 ---
 
@@ -40,19 +37,39 @@ This was a full-stack Java desktop application created for managing course sched
 
 -   **Java SE**
 -   **Apache Derby (Java DB)** — Network Server mode
--   **Swing** — for building UI in NetBeans
--   **MVC-style structure** (manual)
+-   **Swing** — UI built via NetBeans GUI builder
+-   **Manual MVC Structure**
+
+---
+
+## 📸 Admin Panel Screenshots
+
+<img src="./Course_Schedular_Admin_1.png" width="800" title="Admin – Add Semester">
+<img src="./Course_Schedular_Admin_2.png" width="800" title="Admin – Add Course">
+<img src="./Course_Schedular_Admin_3.png" width="800" title="Admin – Add Student">
+<img src="./Course_Schedular_Admin_4.png" width="800" title="Admin – Display Course Roster">
+<img src="./Course_Schedular_Admin_5.png" width="800" title="Admin – Drop Student">
+<img src="./Course_Schedular_Admin_6.png" width="800" title="Admin – Drop Course">
+
+---
+
+## 📸 Student Panel Screenshots
+
+<img src="./Course_Schedular_Student_1.png" width="800" title="Student – Browse Courses">
+<img src="./Course_Schedular_Student_2.png" width="800" title="Student – Schedule Course">
+<img src="./Course_Schedular_Student_3.png" width="800" title="Student – View Schedule">
+<img src="./Course_Schedular_Student_4.png" width="800" title="Student – Drop Course">
 
 ---
 
 ## 📝 Notes
 
-The project was a great experience in:
+This project taught me how to:
 
--   Managing database connections
--   Building CRUD operations across multiple entities
--   Coordinating UI state with backend logic
--   Using NetBeans' GUI builder for clean and responsive layout
+-   Coordinate GUI and backend states cleanly
+-   Implement robust scheduling logic
+-   Work with Java DB in network mode
+-   Design intuitive multi-role user flows
 
 ---
 

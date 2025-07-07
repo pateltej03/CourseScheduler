@@ -13,23 +13,42 @@ public class DBConnection {
     private static final String password = "java";
     private static final String database = "jdbc:derby://localhost:1527/CourseSchedulerDBTejJaideepPateltfp5304;create=true";
 
-    public static Connection getConnection()
-    {
-        if (connection == null)
-        {
-            try
-            {
-                connection = DriverManager.getConnection(database, user, password);
-            } catch (SQLException e)
-            {
-                e.printStackTrace();
-                System.out.println("Could not open database.");
-                System.exit(1);
-
-            }
+//    public static Connection getConnection()
+//    {
+//        if (connection == null)
+//        {
+//            try
+//            {
+//                connection = DriverManager.getConnection(database, user, password);
+//            } catch (SQLException e)
+//            {
+//                e.printStackTrace();
+//                System.out.println("Could not open database.");
+//                System.exit(1);
+//
+//            }
+//        }
+//        return connection;
+//    }
+    public static Connection getConnection() {
+    if (connection == null) {
+        try {
+            // Register the Derby network client driver
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            
+            connection = DriverManager.getConnection(database, user, password);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Derby ClientDriver not found. Make sure derbyclient.jar is in classpath.");
+            e.printStackTrace();
+            System.exit(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Could not open database.");
+            System.exit(1);
         }
-        return connection;
     }
+    return connection;
+}
 
     
 }
